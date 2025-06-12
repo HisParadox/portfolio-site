@@ -13,6 +13,7 @@
       color: #fff;
       scroll-behavior: smooth;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -79,15 +80,12 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Circle Button Animations */
     
-    .circle-link:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    }
 
-    
-      50% { transform: scale(1.05); }
+    /* Logo Animation */
+    @keyframes logoPulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.1); opacity: 1; }
     }
 
     /* Animations */
@@ -144,7 +142,7 @@
 </head>
 <body>
   <header>
-    <h1>AbdulRaheem Kasumu</h1>
+    <div style="font-weight: bold; font-size: 1.5rem; color: #0ff; letter-spacing: 2px; animation: logoPulse 2s infinite alternate ease-in-out;">RK</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
@@ -155,25 +153,31 @@
     </nav>
   </header>
 
-  <section id="home">
-    <h2>Welcome</h2>
+  <section id="home" style="text-align: center; position: relative; overflow: hidden; height: 100vh;">
+  <video autoplay muted loop playsinline style="width: 80vw; height: 80vh; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
+    <source src="c:\Users\Rahee\Downloads\Phone Link\PXL_20250417_140155990.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div style="position: relative; z-index: 1; padding-top: 8rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">AbdulRaheem Kasumu</h1>
     <p>Computer Engineering Student with a passion for embedded systems and problem solving.</p>
-  </section>
+  </div>
+</section>
 
   <section id="projects">
   <h2>Projects & Resume</h2>
   <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <a href="#" onclick="showModal('Certificates'display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #6a0dad; color: #fff; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; text-align: center; font-size: 1rem;">
+    <a href="#" onclick="showModal('Certificates', 'Coming soon: industry certifications, badges, and achievements.'); return false;" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #6a0dad; color: #fff; text-decoration: none; font-weight: bold; text-align: center; font-size: 1rem;">
       Certificates
     </a>
-    <a class="circle-link" href="#" onclick="showModal('Gallery'display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #ff4500; color: #fff; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; text-align: center; font-size: 1rem;">
+    <a href="#" onclick="showModal('Gallery', 'Coming soon: a visual gallery showcasing project images and hardware builds.'); return false;" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #ff4500; color: #fff; text-decoration: none; font-weight: bold; text-align: center; font-size: 1rem;">
       Gallery
     </a>
-    <a class="circle-link" href="#" onclick="showModal('Digital Safe Lock'display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #1e90ff; color: #fff; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; text-align: center; font-size: 1rem;">
-      View Projects
+    <a href="#" onclick="showModal('Digital Safe Lock', 'Designed a secure and interactive digital lock using the Tiva C microcontroller with a 4-digit passcode system, buzzer feedback, LED indicators, and lockout features. Technologies: Tiva C, Embedded C, 7-Segment Display, Buzzer, GPIO'); return false;" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #1e90ff; color: #fff; text-decoration: none; font-weight: bold; text-align: center; font-size: 1rem;">
+      Projects
     </a>
     <a class="circle-link" href="ResNSSW.pdf" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; border-radius: 50%; background-color: #228b22; color: #fff; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; text-align: center; font-size: 1rem;">
-      View Resume
+      Resume
     </a>
   </div>
 </section>
@@ -186,18 +190,18 @@
   <section id="skills" class="skills">
     <h2>Skills</h2>
     <ul>
-      <li><strong>Technical:</strong> Equipment Maintenance, Troubleshooting, Machinery Operation, Safety Compliance, CAD Basics</li>
+      <li><strong>Technical:</strong> Equipment Maintenance, Troubleshooting, Machinery Operation, Safety Compliance, CAD Basics, Soldering...</li>
       <li><strong>Technologies:</strong> Arduino, Tiva C, Raspberry Pi</li>
-      <li><strong>Soft Skills:</strong> Team Collaboration, Detail-Oriented Process Optimization, Problem Solving, Active Listening</li>
+      <li><strong>Soft Skills:</strong> Team Collaboration, Detail-Oriented, Process Optimization, Problem Solving, Active Listening, </li>
       <li><strong>Tools:</strong> Diagnostic Software, Inventory Management Systems, Microsoft Office Suite, VS Code, Blender</li>
     </ul>
     <h3>Skill Levels</h3>
     <p>C</p>
-    <progress value="90" max="100"></progress>
+    <progress value="10" max="100"></progress>
     <p>Python</p>
-    <progress value="85" max="100"></progress>
-    <p>HTML</p>
     <progress value="80" max="100"></progress>
+    <p>HTML</p>
+    <progress value="45" max="100"></progress>
     <p>CSS</p>
     <progress value="75" max="100"></progress>
     <p>JavaScript</p>
@@ -215,7 +219,7 @@
     <a href="https://linkedin.com/in/abdulraheemkasumu" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background-color: #0e76a8;">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 28px; height: 28px; filter: brightness(1.5);" />
     </a>
-    <a href="https://github.com/dashboard" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background-color: #333;">
+    <a href="https://github.com/HisParadox" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background-color: #333;">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 28px; height: 28px; filter: brightness(1.5);" />
     </a>
   </div>
